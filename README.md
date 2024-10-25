@@ -3,7 +3,7 @@
 
 ## Возможности
 
-**QuckDrawGAN** - это генеративная состязательная сеть (GAN), разработанная для обучения на данных из проекта **Quick, Draw!** (https://github.com/googlecreativelab/quickdraw-dataset). Позволяет обучить и испоьльзовать ее для генерации изображений
+**QuckDrawGAN** - это генеративная состязательная сеть (GAN), разработанная для обучения на данных из проекта **Quick, Draw!** (https://github.com/googlecreativelab/quickdraw-dataset). Позволяет обучить модель и испоьльзовать ее для генерации изображений
 
 ![Процесс обучения модели](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmlqcTd6ZmVzYnE1dG92OGQ0enZ6ZGt6endxbmtlcmJyeWh1dGpnbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jsBFynL23hcIWOYDvQ/giphy.gif)
 
