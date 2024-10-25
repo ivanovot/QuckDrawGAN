@@ -9,6 +9,8 @@
 
 **QuckDrawGAN** основан на архитектуре генеративной состязательной сети (GAN), состоящей из двух основных компонентов: генератора и дискриминатора.
 
+---
+
 ### Как происходит обучение модели
 
 Обучение **GAN** включает две основные части: **генератор** и **дискриминатор**. Генератор создает изображения, а дискриминатор оценивает, насколько они похожи на настоящие. Генератор пытается улучшить свои изображения, чтобы обмануть дискриминатор, а дискриминатор, в свою очередь, учится лучше различать подделки и настоящие. Этот процесс повторяется много раз, пока генератор не начнет создавать изображения, которые трудно отличить от реальных. 
@@ -26,6 +28,7 @@
 ```bash
 git clone https://github.com/ivanovot/QuckDrawGAN.git
 cd QuckDrawGAN
+pip install -r requirements.txt
 ```
 
 ## Применение
@@ -52,3 +55,11 @@ python -m QuckDrawGAN.train --fine_tune --generator_file pretrained_output/model
 ```bash
 python -m QuckDrawGAN.model --generator_path pretrained_output/models/generator.pt --discriminator_path pretrained_output/models/discriminator_fine_tuned.pt --output_path result.png --n 16
 ```
+
+---
+
+## Использованые технологи
+Для корректной работы проекта вам потребуется:
+
+- **Python 1.12** 
+- **PyTorch**
