@@ -17,6 +17,7 @@
 
 Генерация изображений происходит в два этапа. Сначала **генератор** создает заданное количество изображений на основе случайного вектора. Затем **дискриминатор** анализирует все сгенерированные изображения и выбирает то, которое наиболее похоже на настоящие. Этот процесс позволяет находить наиболее качественные изображения.
 
+[Предобученные данные для демонстрации работы пакета](pretrained_output/)
 
 ## Установка
 
@@ -29,23 +30,23 @@ cd QuckDrawGAN
 
 ## Применение
 
+Использовать модель можно через
 [Подробное руководство применения пакета](usage.md)
 
-### Обучение модели
-
+#### Обучение модели
+Создание обученных моделей
 ```bash
 python -m QuckDrawGAN.train --data_path duck.ndjson --output_path output --epochs 100 --batch_size 64 --data_max_size 30000
 ```
 
-### Дообучение дискриминатора
-
+#### Дообучение дискриминатора
+Это нужно для более лучшего распознования плохих изображений на этапе генерации
 ```bash
 python -m QuckDrawGAN.train --fine_tune --generator_file pretrained_output/models/generator.pt --discriminator_file pretrained_output/models/discriminator_fine_tuned.pt --data_path duck.ndjson --fine_tune_epochs 15
 ```
 
-### Генерация изображений
-
-
+#### Генерация изображений
+Генерация нового изображения на основе случайного шума или заданного ключа
 ```bash
 python -m QuckDrawGAN.model --generator_path pretrained_output/models/generator.pt --discriminator_path pretrained_output/models/discriminator_fine_tuned.pt --output_path result.png --n 16
 ```
