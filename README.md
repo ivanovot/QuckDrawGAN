@@ -63,3 +63,5 @@ python -m QuckDrawGAN.model --generator_path pretrained_output/models/generator.
 
 - **Python 1.12** 
 - **PyTorch**
+
+Программа протестирована на ОС Windows и Ubuntu
